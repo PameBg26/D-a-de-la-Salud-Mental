@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Día de la Salud Mental</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:35px;
+  font-family:Arial,Helvetica,sans-serif;
+  background:white;
+  color:#222;
+  text-align:center;
+}
+h1{
+  margin:0;
+  font-size:clamp(32px,6vw,52px);
+  font-weight:700;
+}
+button{
+  border:0;
+  border-radius:10px;
+  padding:16px 38px;
+  background:#222;
+  color:white;
+  font-size:20px;
+  font-weight:700;
+  cursor:pointer;
+}
+button:hover{opacity:.88}
+#message{
+  display:none;
+  max-width:700px;
+  padding:0 24px;
+  font-size:clamp(24px,4vw,36px);
+  line-height:1.35;
+  font-weight:600;
+}
+</style>
+</head>
+<body>
+<h1>Día de la Salud Mental</h1>
+
+<button id="phraseBtn" onclick="newMessage()">FRASE</button>
+
+<div id="message"></div>
+
+<script>
+const frases = ["No tienes que tener todo resuelto para estar haciendo las cosas bien.", "Pedir ayuda también es una forma de cuidarte.", "Lo que sientes importa, aunque no siempre sepas cómo explicarlo.", "Descansar no significa ser flojo.", "Tu valor no depende de tus calificaciones.", "No tienes que compararte con el proceso de alguien más.", "Está bien no sentirte bien todos los días.", "No tienes que resolverlo todo hoy.", "Cometer un error no borra todo lo que has aprendido.", "Hablar de lo que te pasa puede hacer las cosas un poco más ligeras.", "Tu salud mental también merece un espacio en tu lista de prioridades.", "Hay días difíciles que no duran para siempre.", "Ser fuerte también significa reconocer cuando necesitas apoyo.", "No tienes que fingir que todo está bien.", "Tu ritmo sigue siendo válido aunque sea diferente al de los demás.", "Una mala calificación no define tu capacidad.", "Puedes empezar de nuevo las veces que necesites.", "Aprender a poner límites también es aprender a cuidarte.", "No estás obligado a poder con todo solo.", "Lo que hoy parece enorme puede sentirse diferente mañana.", "Tu voz merece ser escuchada.", "Está bien cambiar de opinión.", "No tienes que ser perfecto para ser valioso.", "Compararte en redes sociales puede hacerte olvidar todo lo que sí tienes.", "Tu descanso también es productivo.", "Decir 'necesito ayuda' requiere valor.", "No eres tus errores.", "Está bien tomarte un momento para respirar.", "Puedes querer a alguien y aun así poner límites.", "Lo que otros esperan de ti no define quién eres.", "No tienes que demostrar tu valor todo el tiempo.", "Tu bienestar importa tanto como tu rendimiento.", "Hablar con alguien de confianza puede ser un buen primer paso.", "No estás atrasado en la vida por no tener todo claro.", "Es válido sentir emociones que no sabes nombrar.", "Puedes estar orgulloso de avances que nadie más nota.", "A veces avanzar es simplemente no rendirse hoy.", "Tu mejor esfuerzo puede verse diferente cada día.", "Está bien decir que algo te está rebasando.", "No tienes que ganarte el derecho a descansar.", "Ser diferente no significa estar mal.", "Tu historia todavía se está escribiendo.", "Un día difícil no significa una vida difícil.", "También mereces hablarte con la misma amabilidad que le darías a un amigo.", "No todo problema necesita resolverse inmediatamente.", "Está bien alejarte de lo que constantemente te hace sentir mal.", "Tu salud mental no es menos importante que tu salud física.", "Hay personas que quieren escucharte, aunque a veces cueste dar el primer paso.", "No tienes que saber exactamente qué sientes para pedir apoyo.", "Tu identidad no se reduce a lo que haces en la escuela.", "Tu esfuerzo cuenta, incluso cuando el resultado no sale como esperabas.", "No necesitas tener una razón perfecta para cuidar de ti.", "Sentir mucho no te hace débil.", "Está bien necesitar tiempo para procesar lo que pasó.", "Tu tranquilidad también es una meta válida.", "No todo lo que piensas es necesariamente verdad.", "Hablar de emociones no te hace menos fuerte.", "Está bien celebrar tus pequeños logros.", "No tienes que estar disponible para todos todo el tiempo.", "Tu energía es limitada; cuídala.", "Una conversación puede cambiar cómo ves un problema.", "Puedes empezar con una persona de confianza.", "Las redes muestran momentos, no historias completas.", "No midas tu vida con la regla de otra persona.", "Tu cuerpo merece respeto, incluso en los días en que no te gusta cómo se ve.", "No necesitas cambiar para merecer respeto.", "Tu opinión también importa.", "Puedes aprender a decir 'no' sin sentirte culpable.", "Los límites no son rechazo; también son cuidado.", "Está bien no tener ganas de socializar todo el tiempo.", "Tu silencio también puede ser una señal de que necesitas algo.", "Puedes pedir espacio sin alejar a las personas que te quieren.", "Ser amable contigo también es una habilidad que se aprende.", "No necesitas resolver tu futuro a tu edad.", "Está bien no saber qué quieres hacer después.", "Tu futuro no depende de un solo examen.", "Un tropiezo no cancela todo tu progreso.", "Puedes volver a intentarlo de otra manera.", "Descansar antes de llegar al límite también es autocuidado.", "Tu mente necesita pausas igual que tu cuerpo.", "Respirar profundo no arregla todo, pero puede darte un momento para volver a empezar.", "A veces cuidar una amistad también significa hablar con honestidad.", "Las personas que te quieren no esperan que seas perfecto.", "Está bien alejarte de una amistad que te hace daño.", "Mereces relaciones donde puedas ser tú mismo.", "El respeto también se demuestra cuando nadie está mirando.", "Puedes ser un buen amigo sin olvidarte de ti.", "Escuchar también es una forma de acompañar.", "Una persona puede estar sonriendo y aun así necesitar apoyo.", "Si notas que alguien cambió mucho, preguntar cómo está puede importar.", "No necesitas tener soluciones para escuchar a alguien.", "Tomar en serio lo que alguien siente puede hacer una diferencia.", "Si algo te preocupa mucho, cuéntaselo a un adulto de confianza.", "Buscar apoyo no significa que estés exagerando.", "Hablar a tiempo puede evitar que un problema crezca.", "No tienes que esperar a estar al límite para pedir ayuda.", "Tu bienestar merece atención antes de convertirse en una emergencia.", "Tu salud mental merece cuidado durante todo el año, no solo hoy.", "Hoy puede ser un buen día para revisar cómo estás realmente.", "Pregúntate: ¿qué necesito hoy?", "Quizá no necesitas más presión; quizá necesitas una pausa.", "Una pequeña decisión a favor de ti también cuenta.", "Tomar agua, comer, dormir y descansar también son formas de cuidarte.", "Dormir no es perder tiempo; tu cerebro lo necesita.", "Tu concentración también necesita descanso.", "Tu cuerpo y tu mente trabajan en equipo.", "Aprender a reconocer tus señales de estrés puede ayudarte a cuidarte antes.", "Si algo te está quitando el sueño constantemente, merece atención.", "Tu ansiedad no define quién eres.", "Sentir nervios antes de algo importante es humano.", "Puedes sentir miedo y aun así dar un pequeño paso.", "No tienes que esperar a sentirte seguro para empezar.", "Valentía no significa no tener miedo.", "Puedes equivocarte y seguir adelante.", "No todo fracaso es un fracaso; a veces es información.", "Tu proceso puede tener pausas y aun así seguir siendo un proceso.", "Puedes aprender algo nuevo sobre ti en un día difícil.", "Lo que hoy te cuesta puede volverse más fácil con práctica y apoyo.", "No tienes que hacerlo perfecto para que valga la pena.", "Tu progreso no siempre se nota desde afuera.", "Date crédito por las cosas que sí estás intentando.", "Hay más posibilidades de las que puedes ver en un momento difícil.", "Un problema no ocupa toda tu vida, aunque ahora se sienta así.", "Puedes cambiar de rumbo.", "Puedes pedir una segunda oportunidad.", "Puedes elegir qué batallas vale la pena pelear.", "Tu autoestima no debería depender de la aprobación de internet.", "Un 'like' no mide tu valor.", "Tu apariencia no es lo más interesante de ti.", "Hay cosas valiosas en ti que no se pueden fotografiar.", "No necesitas parecer feliz todo el tiempo.", "Tu vida no tiene que verse perfecta para ser valiosa.", "Permítete disfrutar cosas sencillas.", "Busca momentos que te hagan sentir presente.", "A veces una buena canción también puede ser una pequeña pausa.", "Salir a caminar puede ayudarte a despejar la mente.", "Hablar con alguien puede cambiar el peso de un día difícil.", "Escribir lo que sientes puede ayudarte a ordenar tus pensamientos.", "Encontrar una actividad que disfrutes también es autocuidado.", "No todo tiene que ser productividad.", "Divertirte también es parte de estar bien.", "Tu adolescencia no tiene que ser perfecta para ser importante.", "Está bien descubrir quién eres poco a poco.", "No necesitas tener una etiqueta para entenderte.", "Puedes cambiar mientras creces.", "Está bien dejar atrás versiones de ti que ya no te representan.", "Tu opinión sobre ti puede cambiar con nuevas experiencias.", "Aprender sobre ti también es parte de crecer.", "No tienes que encajar en todos los grupos.", "Encontrar a tu gente puede tomar tiempo.", "Ser tú mismo con las personas correctas se siente diferente.", "Mereces sentirte seguro para ser quien eres.", "Tu sensibilidad puede ser una fortaleza.", "Ser empático no significa cargar con los problemas de todos.", "Puedes ayudar a otros sin olvidarte de ti.", "Cuidarte no es egoísmo.", "Ponerte primero algunas veces también es necesario.", "Puedes decir 'hoy no puedo' y eso está bien.", "Tu bienestar no necesita aprobación.", "Escuchar a tu cuerpo y a tu mente es importante.", "Hay días para avanzar y días para recuperar energía.", "No tienes que aprovechar cada minuto del día.", "Tu descanso también forma parte del aprendizaje.", "Puedes bajar el ritmo sin abandonar tus metas.", "Hoy haz una cosa que te haga bien.", "Y si hoy no fue un buen día, mañana puedes volver a intentarlo.", "Recuerda: no tienes que pasar por todo esto solo.", "Tu historia vale la pena ser escuchada.", "Hay ayuda disponible cuando la necesitas.", "Hablar es un comienzo.", "Tu bienestar importa. Hoy y todos los días."];
+let last = -1;
+function newMessage(){
+  let i;
+  do { i = Math.floor(Math.random()*frases.length); } while(frases.length>1 && i===last);
+  last=i;
+  const box=document.getElementById('message');
+  box.style.display='block';
+  document.getElementById('phraseBtn').style.display='none';
+  box.textContent=frases[i];
+}
+</script>
+</body>
+</html>
